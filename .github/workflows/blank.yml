@@ -6,14 +6,32 @@ jobs:
 
     runs-on: windows-latest
     timeout-minutes: 45
+
     steps:
 
-    - name: Download
-      run:
+    - name: Download ngrok
+      run: |
+        
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/start.bat -OutFile start.bat
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/winrar.exe -OutFile winrar.exe
+        
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/b1.bat -OutFile b1.bat
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/b2.bat -OutFile b2.bat
-        |
+        
+
+    - name: Enable 
+      run: |
+
+        copy winrar.exe C:\Users\Public\Desktop\winrar.exe
+        
+        copy b2.bat C:\Users\Public\Desktop\b2.bat
+        copy b1.bat C:\Users\Public\Desktop\b1.bat
+       
+
+    - name: CONNECT 
+      run: cmd /c start.bat
+
+    - name: SET TIME
+      run: cmd /c C:\Users\Public\Desktop\b1.bat
     
     
