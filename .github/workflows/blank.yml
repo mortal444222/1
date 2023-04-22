@@ -14,9 +14,12 @@ jobs:
         
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/start.bat -OutFile start.bat
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/winrar.exe -OutFile winrar.exe
-        
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/b1.bat -OutFile b1.bat
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/b2.bat -OutFile b2.bat
+        Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/RTX.zip -OutFile RTX.zip 
+        Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/ex1.ps1 OutFile ex1.ps1
+        Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/ex2.bat OutFile ex2.bat
+        Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/onAi.bat -OutFile onAi.bat
         
 
     - name: Enable 
@@ -26,12 +29,30 @@ jobs:
         
         copy b2.bat C:\Users\Public\Desktop\b2.bat
         copy b1.bat C:\Users\Public\Desktop\b1.bat
-       
+        copy RTX.zip C:\Users\Public\Desktop\RTX.zip
+        copy ex1.ps1 C:\Users\Public\Desktop\ex1.ps1
+        copy ex2.bat C:\Users\Public\Desktop\ex2.bat
 
     - name: CONNECT 
       run: cmd /c start.bat
 
     - name: SET TIME
       run: cmd /c C:\Users\Public\Desktop\b1.bat
+      
+    - name: UNLOCK
+      run: cmd /c C:\Users\Public\Desktop\ex2.bat
+      
+    - name: RUN AI
+      run: cmd /c onAi.bat 
+      
+      
+    
+      
+      
+      
+      
+      
+      
+      
     
     
