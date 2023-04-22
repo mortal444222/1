@@ -9,7 +9,7 @@ jobs:
 
     steps:
 
-    - name: Download ngrok
+    - name: Download 
       run: |
         
         Invoke-WebRequest https://github.com/bhupi0724/data/releases/download/rdp/start.bat -OutFile start.bat
