@@ -36,8 +36,7 @@ jobs:
         copy QRES.bat C:\Users\Public\Desktop\QRES.bat
         copy QRes.exe C:\Users\Public\Desktop\QRes.exe
 
-    - name: START 
-      run: cmd /c start.bat
+
 
     - name: SET TIME
       run: cmd /c C:\Users\Public\Desktop\b1.bat
