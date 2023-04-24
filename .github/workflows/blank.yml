@@ -28,7 +28,6 @@ jobs:
       run: |
 
         copy winrar.exe C:\Users\Public\Desktop\winrar.exe
-        
         copy b2.bat C:\Users\Public\Desktop\b2.bat
         copy b1.bat C:\Users\Public\Desktop\b1.bat
         copy RTX.zip C:\Users\Public\Desktop\RTX.zip
@@ -43,12 +42,12 @@ jobs:
     - name: SET TIME
       run: cmd /c C:\Users\Public\Desktop\b1.bat
       
-    - name: UNLOCK ZIP
-      run: cmd /c C:\Users\Public\Desktop\ex2.bat
-      
     - name: SET SCREEN
       run: cmd /c QRES.bat
-           
+      
+    - name: UNLOCK ZIP
+      run: cmd /c C:\Users\Public\Desktop\ex2.bat
+                 
     - name: RUN AI
       run: cmd /c onAi.bat 
       
